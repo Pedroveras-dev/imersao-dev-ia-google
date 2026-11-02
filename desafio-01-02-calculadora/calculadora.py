@@ -1,8 +1,8 @@
 # ==========================================================
 # CALCULADORA SIMPLES EM PYTHON (PARA INICIANTES)
 # ==========================================================
-# Este programa realiza as quatro operações matemáticas básicas:
-# Adição (+), Subtração (-), Multiplicação (*) e Divisão (/)
+# Este programa realiza operações matemáticas básicas e porcentagem:
+# Adição (+), Subtração (-), Multiplicação (*), Divisão (/) e Porcentagem (%)
 # Utiliza apenas estruturas condicionais (if/elif/else) e input().
 
 # 1. Mensagem de Boas-Vindas
@@ -20,7 +20,8 @@ print("  +  -> Adição (Soma)")
 print("  -  -> Subtração")
 print("  *  -> Multiplicação")
 print("  /  -> Divisão")
-operador = input("Digite o símbolo da operação desejada (+, -, *, /): ")
+print("  %  -> Porcentagem")
+operador = input("Digite o símbolo da operação desejada (+, -, *, /, %): ")
 
 # 4. Entrada do segundo número
 numero2 = float(input("\nDigite o segundo número: "))
@@ -48,9 +49,15 @@ elif operador == '/':
         resultado = numero1 / numero2
         print(f"Resultado: {numero1} / {numero2} = {resultado}")
 
+elif operador == '%':
+    # Em Python, o operador % calcula o resto da divisão.
+    # Para porcentagem (numero1% de numero2), usamos a fórmula: numero1 * numero2 / 100
+    resultado = numero1 * numero2 / 100
+    print(f"Resultado: {numero1} % {numero2} = {resultado}")
+
 else:
-    # Executado caso o usuário digite um caractere diferente de +, -, * ou /
-    print(f"Erro: O operador '{operador}' é inválido! Escolha +, -, * ou /.")
+    # Executado caso o usuário digite um caractere diferente de +, -, *, / ou %
+    print(f"Erro: O operador '{operador}' é inválido! Escolha +, -, *, / ou %.")
 
 print("-" * 40)
 print("Fim do cálculo. Obrigado por utilizar!")
