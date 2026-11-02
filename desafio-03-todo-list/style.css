@@ -1,0 +1,175 @@
+/* ==========================================================
+   ESTILOS GERAIS DA APLICAÇÃO (RESET E LAYOUT BASE)
+   ========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #eef2f7 0%, #dbe4ef 100%);
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* ==========================================================
+   CONTAINER DO APLICATIVO
+   ========================================================== */
+.app-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.app-header p {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* ==========================================================
+   FORMULÁRIO DE ENTRADA (INPUT E BOTÃO ADICIONAR)
+   ========================================================== */
+.form-tarefa {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.input-tarefa {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-tarefa:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-adicionar {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-adicionar:hover {
+  background-color: #2563eb;
+}
+
+.btn-adicionar:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================
+   LISTA DE TAREFAS
+   ========================================================== */
+.lista-tarefas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Cada item individual da lista (<li>) */
+.item-tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.item-tarefa:hover {
+  background-color: #f3f4f6;
+}
+
+/* Área que envolve o checkbox e o texto da tarefa */
+.item-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.checkbox-tarefa {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #10b981;
+}
+
+.texto-tarefa {
+  font-size: 1rem;
+  color: #1f2937;
+  word-break: break-word;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Estilo aplicado quando a tarefa é marcada como concluída */
+.item-tarefa.concluida {
+  background-color: #f3f4f6;
+  opacity: 0.75;
+}
+
+.item-tarefa.concluida .texto-tarefa {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+/* Botão de remover tarefa */
+.btn-remover {
+  background-color: #fee2e2;
+  color: #ef4444;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-remover:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.btn-remover:active {
+  transform: scale(0.96);
+}
+

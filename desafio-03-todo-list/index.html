@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Container principal centralizado na página -->
+  <main class="app-container">
+    <header class="app-header">
+      <h1>Lista de Tarefas</h1>
+      <p>Organize suas atividades do dia a dia</p>
+    </header>
+
+    <!-- Formulário para adicionar nova tarefa -->
+    <form id="form-tarefa" class="form-tarefa">
+      <input 
+        type="text" 
+        id="input-tarefa" 
+        class="input-tarefa" 
+        placeholder="Digite uma nova tarefa..." 
+        autocomplete="off"
+      >
+      <button type="submit" id="btn-adicionar" class="btn-adicionar">
+        Adicionar
+      </button>
+    </form>
+
+    <!-- Lista onde os itens de tarefa serão inseridos dinamicamente pelo JavaScript -->
+    <ul id="lista-tarefas" class="lista-tarefas"></ul>
+  </main>
+
+  <!-- Arquivo de script carregado no final do body -->
+  <script src="script.js"></script>
+</body>
+</html>
+
