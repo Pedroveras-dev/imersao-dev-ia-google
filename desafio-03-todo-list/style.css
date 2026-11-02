@@ -140,12 +140,26 @@ body {
   transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-/* Estilo aplicado quando a tarefa é marcada como concluída */
+/* ==========================================================
+   ESTILOS PARA TAREFAS CONCLUÍDAS (VISUAL DIFERENCIADO)
+   ========================================================== */
+/* 
+   Quando o item <li> recebe a classe .concluida:
+   - Fundo alterado para cinza claro (#f3f4f6)
+   - Opacidade reduzida (0.65) para criar o visual apagado
+   - Borda discreta mantendo harmonia
+*/
 .item-tarefa.concluida {
   background-color: #f3f4f6;
-  opacity: 0.75;
+  border-color: #e5e7eb;
+  opacity: 0.65;
 }
 
+/* 
+   Texto riscado e cor apagada (cinza claro):
+   - text-decoration: line-through cria a linha cortando o texto
+   - color: #9ca3af deixa o texto acinzentado, indicando conclusão
+*/
 .item-tarefa.concluida .texto-tarefa {
   text-decoration: line-through;
   color: #9ca3af;

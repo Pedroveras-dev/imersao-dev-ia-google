@@ -41,11 +41,16 @@ function adicionarTarefa(texto) {
   btnRemover.className = 'btn-remover';
   btnRemover.textContent = 'Remover';
 
-  // FUNCIONALIDADE 2: MARCAR COMO CONCLUÍDA
-  // O evento 'change' dispara sempre que o checkbox é marcado ou desmarcado
+  // FUNCIONALIDADE 2: MARCAR COMO CONCLUÍDA OU VOLTAR PARA PENDENTE
+  // O evento 'change' dispara tanto ao marcar quanto ao desmarcar a caixinha
   checkbox.addEventListener('change', function () {
-    // toggle adiciona a classe 'concluida' se checked for true, e remove se for false
-    li.classList.toggle('concluida', checkbox.checked);
+    if (checkbox.checked) {
+      // 1. Ao marcar: adiciona a classe CSS 'concluida' ao item da lista
+      li.classList.add('concluida');
+    } else {
+      // 2. Ao desmarcar: remove a classe CSS 'concluida', voltando ao visual pendente
+      li.classList.remove('concluida');
+    }
   });
 
   // FUNCIONALIDADE 3: REMOVER TAREFA
